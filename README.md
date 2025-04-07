@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Checklist de Casamento - Landing Page
 
-## Getting Started
+Uma landing page moderna e responsiva para venda de um checklist de casamento, desenvolvida com Next.js, React e Tailwind CSS.
 
-First, run the development server:
+## 🚀 Tecnologias
 
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## 📋 Pré-requisitos
+
+- Node.js 18.x ou superior
+- npm ou yarn
+
+## 🔧 Instalação
+
+1. Clone o repositório:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/seu-usuario/aff-checklist-casamento.git
+cd aff-checklist-casamento
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instale as dependências:
+```bash
+npm install
+# ou
+yarn install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+# ou
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-## Learn More
+## 📦 Estrutura do Projeto
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  ├── app/
+  │   ├── components/         # Componentes React
+  │   │   ├── BenefitsSection.tsx
+  │   │   ├── CTAButton.tsx
+  │   │   ├── FAQSection.tsx
+  │   │   ├── Footer.tsx
+  │   │   ├── HeroSection.tsx
+  │   │   ├── PricingSection.tsx
+  │   │   └── TestimonialsSection.tsx
+  │   ├── globals.css        # Estilos globais
+  │   ├── layout.tsx         # Layout principal
+  │   └── page.tsx           # Página inicial
+  └── ...
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Construído com
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Next.js - O framework React para produção
+* Tailwind CSS - Framework CSS utilitário
+* TypeScript - Superset JavaScript com tipagem estática
 
-## Deploy on Vercel
+## 📄 Licença
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ✨ Funcionalidades
+
+- Design responsivo
+- Animações suaves
+- Seções organizadas
+- Otimizado para SEO
+- Performance otimizada
+- Acessibilidade
+
+## 🤝 Contribuindo
+
+1. Faça o fork do projeto
+2. Crie sua Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a Branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📫 Contato
+
+Seu Nome - [@seutwitter](https://twitter.com/seutwitter) - email@exemplo.com
+
+Link do projeto: [https://github.com/seu-usuario/aff-checklist-casamento](https://github.com/seu-usuario/aff-checklist-casamento)
