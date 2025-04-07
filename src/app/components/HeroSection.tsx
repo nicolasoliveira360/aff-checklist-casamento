@@ -4,11 +4,9 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export const HeroSection: React.FC = () => {
-  // Lazy load para componentes não essenciais
   const [showSocialProof, setShowSocialProof] = useState(false);
 
   useEffect(() => {
-    // Carrega a prova social após o conteúdo principal
     const timer = setTimeout(() => {
       setShowSocialProof(true);
     }, 100);
@@ -16,15 +14,28 @@ export const HeroSection: React.FC = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  const handlePurchaseClick = () => {
-    // Verifica se o fbq existe antes de chamar
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Purchase', {
-        value: 97.00,
-        currency: 'BRL'
-      });
+  const avatars = [
+    {
+      src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
+      alt: "Noiva satisfeita 1"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
+      alt: "Noiva satisfeita 2"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1557555187-23d685287bc3?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
+      alt: "Noiva satisfeita 3"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
+      alt: "Noiva satisfeita 4"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
+      alt: "Noiva satisfeita 5"
     }
-  };
+  ];
 
   return (
     <section className="bg-white py-8 md:py-16">
@@ -51,38 +62,15 @@ export const HeroSection: React.FC = () => {
 
         <a 
           href="#pricing"
-          onClick={handlePurchaseClick}
           className="inline-block text-base sm:text-lg md:text-xl bg-rose-600 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-full shadow-lg hover:bg-rose-700 transform transition-all duration-300 hover:scale-105 w-full sm:w-auto mb-6"
         >
           QUERO ECONOMIZAR NO MEU CASAMENTO
         </a>
 
-        {/* Prova Social carregada condicionalmente */}
         {showSocialProof && (
           <div className="flex flex-col items-center justify-center">
             <div className="flex -space-x-2 mb-2">
-              {[
-                {
-                  src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
-                  alt: "Noiva satisfeita 1"
-                },
-                {
-                  src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
-                  alt: "Noiva satisfeita 2"
-                },
-                {
-                  src: "https://images.unsplash.com/photo-1557555187-23d685287bc3?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
-                  alt: "Noiva satisfeita 3"
-                },
-                {
-                  src: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
-                  alt: "Noiva satisfeita 4"
-                },
-                {
-                  src: "https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?w=80&h=80&fit=crop&crop=faces&auto=format&q=90",
-                  alt: "Noiva satisfeita 5"
-                }
-              ].map((avatar, index) => (
+              {avatars.map((avatar, index) => (
                 <Image
                   key={index}
                   src={avatar.src}
